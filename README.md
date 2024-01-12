@@ -1,5 +1,6 @@
 # Setup
 
 Make sure to install the dependencies:
-
-```npm install
+```
+npm install
+```
