@@ -2,7 +2,6 @@
 
 Make sure to install the dependencies:
 
-# npm
 npm install
 ```
 
