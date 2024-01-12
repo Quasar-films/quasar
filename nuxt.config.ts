@@ -2,7 +2,5 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   // @ts-ignore
-  css: [
-    '@/assets/scss/main.scss',
-  ],
+  css: ['~/assets/scss/main.scss']
 })
