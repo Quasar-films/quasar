@@ -24,5 +24,7 @@ const links = [
 </script>
 
 <style lang="scss" scoped>
+.header {
 
+}
 </style>
