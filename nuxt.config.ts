@@ -7,4 +7,13 @@ export default defineNuxtConfig({
         // Homepage pre-rendered at build time
         '/': { prerender: true },
     },
+    runtimeConfig: {
+        // примеры конфигов!!!
+
+        apiSecret: '123',
+        // Keys within public are also exposed client-side
+        public: {
+            apiBase: '/api',
+        },
+    },
 })
