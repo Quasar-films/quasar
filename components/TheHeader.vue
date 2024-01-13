@@ -28,7 +28,7 @@ const links = [
     {id: 3, name: 'Profile', route: '/profile'},
 ]
 
-const title = Texts.title;
+const title = Texts.AppTitle;
 </script>
 
 <style lang="scss" scoped>
