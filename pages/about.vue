@@ -5,23 +5,8 @@
 </template>
 
 <script setup lang="ts">
-import Texts from "~/assets/constants/Texts";
+import useSeoMetaData from "~/composables/useSeoMetaData";
+import about from "~/assets/constants/seo/about";
 
-const title = 'About';
-const description = 'Information about us'
-
-useSeoMeta({
-    title: title,
-    description: description,
-    ogDescription: description,
-    ogTitle: title,
-    ogImage: '',
-    ogType: 'website',
-    ogLocale: 'en_GB',
-    twitterCard: 'summary',
-    twitterTitle: title,
-    twitterDescription: description,
-    twitterImage: '',
-    twitterImageAlt: Texts.AppTitle,
-});
+useSeoMetaData(about);
 </script>

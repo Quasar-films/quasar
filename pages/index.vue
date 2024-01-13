@@ -5,7 +5,8 @@
 </template>
 
 <script setup lang="ts">
-useHead({
-    title: 'Home',
-})
+import useSeoMetaData from "~/composables/useSeoMetaData";
+import home from "~/assets/constants/seo/home";
+
+useSeoMetaData(home);
 </script>

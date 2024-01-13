@@ -1,3 +1,3 @@
 export default {
-    AppTitle: 'Quasar'
+    AppTitle: 'Quasar',
 }

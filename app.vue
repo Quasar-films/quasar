@@ -8,6 +8,10 @@
 import Texts from "~/assets/constants/Texts";
 
 useHead({
-    titleTemplate: `${Texts.AppTitle} | %s`,
+    titleTemplate: (text: string = '') => {
+        return text
+            ? `${Texts.AppTitle} | ${text}`
+            : `${Texts.AppTitle}`;
+    },
 })
 </script>
