@@ -1,5 +1,11 @@
 <template>
     <div class="about">
-        about
+        <div>about</div>
     </div>
 </template>
+
+<script setup lang="ts">
+definePageMeta({
+    layout: 'custom'
+})
+</script>
