@@ -6,9 +6,12 @@
             <ul class="header__list">
                 <li
                     v-for="link in links" :key="link.id"
-                    class="header__link"
+                    class="header__list-item"
                 >
-                    <NuxtLink :to="link.route">
+                    <NuxtLink
+                        :to="link.route"
+                        class="header__link link"
+                    >
                         {{ link.name }}
                     </NuxtLink>
                 </li>
@@ -26,5 +29,27 @@ const links = [
 </script>
 
 <style lang="scss" scoped>
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
 
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__list-item {
+        list-style: none;
+
+        &:not(:last-child) {
+            margin-right: 14px;
+        }
+    }
+
+    &__link {
+        font-size: 18px;
+    }
+}
 </style>

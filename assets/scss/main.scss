@@ -18,6 +18,18 @@
     opacity: 0;
     filter: blur(1rem);
 }
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.link {
+   &:hover {
+       color: $white-color;
+   }
+}
+
 h1 {
     font-size: 92px;
     font-weight: 400;
