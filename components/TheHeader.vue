@@ -29,11 +29,17 @@ const links = [
 </script>
 
 <style lang="scss" scoped>
+@import "assets/scss/variables";
+
 .header {
     display: flex;
+    position: fixed;
+    top: 0;
     align-items: center;
     justify-content: space-between;
     padding: 14px 20px;
+    width: 100%;
+    background: $gradient-bg-color;
 
     &__list {
         display: flex;
@@ -44,7 +50,7 @@ const links = [
         list-style: none;
 
         &:not(:last-child) {
-            margin-right: 14px;
+            margin-right: 20px;
         }
     }
 

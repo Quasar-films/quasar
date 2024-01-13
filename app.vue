@@ -1,6 +1,8 @@
 <template>
     <TheHeader/>
-    <NuxtPage/>
+    <main>
+        <NuxtPage/>
+    </main>
     <TheFooter/>
 </template>
 
