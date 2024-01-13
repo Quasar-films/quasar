@@ -1,13 +1,6 @@
 <template>
     <div class="app-input">
-        <input
-            :type="type"
-            :value="modelValue"
-            :disabled="disabled"
-            :maxlength="maxLength"
-            :placeholder="placeholder"
-            @input="onInput($event.target)"
-        >
+        <input>
     </div>
 </template>
 
