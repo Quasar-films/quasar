@@ -3,7 +3,7 @@ export default defineNuxtConfig({
     typescript: {
         typeCheck: true
     },
-    devtools: {enabled: true},
+    devtools: {enabled: false},
     // @ts-ignore
     css: ['~/assets/scss/main.scss'],
     routeRules: {
