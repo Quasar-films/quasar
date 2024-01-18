@@ -6,7 +6,7 @@
 
         <div class="products__content">
             <NuxtLink
-                v-for="item in items"
+                v-for="item in products"
                 :key="item.id"
                 :to="'/product/' + item.id"
                 class="products__item link--underline"
@@ -20,12 +20,7 @@
 <script setup lang="ts">
 const title = ref('Products');
 
-const items = ref([
-    {id: 1, name: 'item1'},
-    {id: 2, name: 'item2'},
-    {id: 3, name: 'item3'},
-    {id: 4, name: 'item4'},
-]);
+const { data: products } = await useAsyncData('products', () => $fetch('/api/test'));
 </script>
 
 <style lang="scss" scoped>
