@@ -1,6 +1,6 @@
 <template>
     <div class="profile">
-        <div>profile</div>
+        <div>profile {{ sameCounter }}</div>
     </div>
 </template>
 
@@ -12,4 +12,6 @@ useSeoMetaData(profile);
 definePageMeta({
     middleware: 'auth'
 })
+
+const sameCounter = useState('counter')
 </script>

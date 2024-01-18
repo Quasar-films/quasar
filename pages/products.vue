@@ -21,6 +21,7 @@
 const title = ref('Products');
 
 const { data: products } = await useAsyncData('products', () => $fetch('/api/test'));
+const counter = useState('counter', () => 330);
 </script>
 
 <style lang="scss" scoped>
