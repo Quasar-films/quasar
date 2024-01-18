@@ -14,6 +14,20 @@
                 {{ item.name }}
             </NuxtLink>
         </div>
+
+        <div>
+            <h4>
+                {{ counter }}
+            </h4>
+
+            <button @click="inc" class="products__button">
+                +
+            </button>
+
+            <button @click="dec" class="products__button">
+                -
+            </button>
+        </div>
     </div>
 </template>
 
@@ -21,7 +35,14 @@
 const title = ref('Products');
 
 const { data: products } = await useAsyncData('products', () => $fetch('/api/test'));
+
 const counter = useState('counter', () => 330);
+
+let refCounter = ref(0);
+
+const inc = () => refCounter.value++;
+
+const dec = () => refCounter.value--;
 </script>
 
 <style lang="scss" scoped>
@@ -44,6 +65,13 @@ const counter = useState('counter', () => 330);
         &:not(:last-child) {
             margin-bottom: 10px;
         }
+    }
+
+    &__button {
+        width: 24px;
+        height: 24px;
+        color: black;
+        cursor: pointer;
     }
 }
 </style>
