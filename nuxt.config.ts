@@ -10,9 +10,6 @@ export default defineNuxtConfig({
         // Homepage pre-rendered at build time
         '/': { prerender: true },
     },
-    app: {
-        pageTransition: { name: 'page', mode: 'out-in' }
-    },
     runtimeConfig: {
         // примеры конфигов!!!
 
