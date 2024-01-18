@@ -8,4 +8,8 @@
 import profile from "~/assets/constants/seo/profile";
 
 useSeoMetaData(profile);
+
+definePageMeta({
+    middleware: 'auth'
+})
 </script>
