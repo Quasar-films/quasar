@@ -42,11 +42,9 @@ let refCounter = ref(0);
 
 const inc = () => refCounter.value++;
 
-const dec = () => refCounter.value--;
-
 const productsStore = useProductsStore();
 
-productsStore.getProducts();
+await productsStore.getProducts();
 </script>
 
 <style lang="scss" scoped>
