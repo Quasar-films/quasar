@@ -9,14 +9,13 @@
 <script setup lang="ts">
 import Texts from "~/assets/constants/Texts";
 import type {PropType} from "vue";
-
-type Format = 'lg' | 'md' | 'sm';
+import type {Size} from "~/types";
 
 const title = Texts.AppTitle;
 
 const props = defineProps({
     size: {
-        type: String as PropType<Format>,
+        type: String as PropType<Size>,
         default: 'md',
     },
 });
@@ -36,7 +35,7 @@ const sizeClass = computed(() => {
     font-family: $secondary-ff;
     font-size: 28px;
     background: $secondary-bg-color;
-    padding: 4px 8px;
+    padding: 7px 12px;
     border-radius: $br8;
     cursor: pointer;
 
