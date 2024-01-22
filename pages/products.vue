@@ -24,23 +24,13 @@
         </h5>
 
         <div>
-            <h4>
-                {{ counter }}
-            </h4>
-
-            <AppButton title="Plus" @click="inc"/>
+            <AppButton title="Plus"/>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
 const title = ref('Products');
-
-const counter = useState('counter', () => 330);
-
-let refCounter = ref(0);
-
-const inc = () => refCounter.value++;
 
 const productsStore = useProductsStore();
 

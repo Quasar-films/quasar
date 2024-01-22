@@ -18,7 +18,7 @@ export default defineNuxtConfig({
             apiBase: '/api',
         },
     },
-    modules: ["@pinia/nuxt"],
+    modules: ["@pinia/nuxt", '@nuxt/test-utils/module'],
     pinia: {
         storesDirs: ['./stores/**', './custom-folder/stores/**'],
     },
