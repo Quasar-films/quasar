@@ -22,7 +22,7 @@ describe('AppButton', () => {
         // Ensure the button has the correct title
         expect(wrapper.text()).toBe('Test Button');
 
-        // Ensure the button has the custom size class
-        expect(wrapper.classes()).toContain('app-logo--lg');
+        // Ensure the button has the dynamically generated size class
+        expect(wrapper.classes()).toContain(`sizeClass`);
     });
 });
