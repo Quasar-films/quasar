@@ -5,6 +5,8 @@
 .nitro
 .cache
 dist
+coverage
+html
 
 # Node dependencies
 node_modules
