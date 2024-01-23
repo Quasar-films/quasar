@@ -5,13 +5,17 @@ type Product = {
     name: string,
 }
 
+type State = {
+    items: Product[],
+}
+
 export const useProductsStore = defineStore('ProductsStore', {
-    state: () => ({items: [] as any}),
+    state: (): State => ({items: []}),
     getters: {
-        getProductById(state) {
+        getProductById(state: State) {
             return (id: number) => state.items.find((e: Product) => e.id === id);
         },
-        getProductsCount(state) {
+        getProductsCount(state: State) {
             return state.items.length;
         }
     },
@@ -19,7 +23,7 @@ export const useProductsStore = defineStore('ProductsStore', {
         async getProducts() {
             const {data: products} = await useAsyncData('products', () => $fetch('/api/test'));
 
-            this.items = products;
+            this.items = products as any;
         },
     }
 })
