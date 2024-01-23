@@ -7,11 +7,10 @@
 </template>
 
 <script setup lang="ts">
-import Texts from "~/assets/constants/Texts";
 import type {PropType} from "vue";
 import type {Size} from "~/types";
 
-const title = Texts.AppTitle;
+const title  = useAppConfig().title;
 
 const props = defineProps({
     size: {

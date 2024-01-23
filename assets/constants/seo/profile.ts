@@ -1,5 +1,4 @@
-import Texts from "~/assets/constants/Texts";
-
+const AppTitle = useAppConfig().title;
 const title = 'Профиль';
 const description = 'Добро пожаловать в личный кабинет "Quasar" – твоего надежного гида в мире кино! Здесь мы собрали лучшие фильмы, предоставили обзоры и подготовили персональные рекомендации. Присоединяйся, обменивайся впечатлениями и открывай для себя новые киноленты. Ты также можешь следить за своим собственным рейтингом, основанным на активности на сайте!'
 
@@ -15,5 +14,5 @@ export default {
     twitterTitle: title,
     twitterDescription: description,
     twitterImage: '',
-    twitterImageAlt: Texts.AppTitle,
+    twitterImageAlt: AppTitle,
 }

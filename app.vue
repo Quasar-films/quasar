@@ -7,13 +7,13 @@
 </template>
 
 <script setup lang="ts">
-import Texts from "~/assets/constants/Texts";
+const AppTitle = useAppConfig().title;
 
 useHead({
     titleTemplate: (text: string = '') => {
         return text
-            ? `${Texts.AppTitle} | ${text}`
-            : `${Texts.AppTitle}`;
+            ? `${AppTitle} | ${text}`
+            : `${AppTitle}`;
     },
 })
 </script>

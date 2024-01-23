@@ -34,15 +34,3 @@ export const useProductsStore = defineStore('ProductsStore', {
         },
     }
 })
-
-// export const useProductsStore = defineStore('ProductsStore', () => {
-//     let items = reactive([])
-//
-//     async function getProducts() {
-//         const {data: products} = await useAsyncData('products', () => $fetch('/api/test'));
-//
-//         items = products;
-//     }
-//
-//     return { items, getProducts }
-// })
