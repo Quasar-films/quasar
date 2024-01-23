@@ -16,6 +16,10 @@ describe('Product store', () => {
         store = useProductsStore();
     })
 
+    afterEach(() => {
+        store.$reset();
+    })
+
     // проверяем есть ли store в принципе
     it('creates a store', () => {
         expect(store).toBeDefined();
@@ -36,10 +40,11 @@ describe('Product store', () => {
     })
 
     // проверяем методы
-    it('initializes with items', () => {
+    it('uses methods', () => {
         const products = [
             {id: 100, name: 'test'}
         ]
+        const test = store.getProducts();
         store.setProducts(products);
         expect(store.getProductById(100)?.name).toBe('test');
         expect(store.getProductsCount).toBe(1);
