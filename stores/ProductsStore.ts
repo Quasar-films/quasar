@@ -23,11 +23,14 @@ export const useProductsStore = defineStore('ProductsStore', {
         async getProducts() {
             try {
                 const {data: products} = await useAsyncData('products', () => $fetch('/api/test'));
-                this.items = products as any;
+                this.setProducts(products as any);
             }
             catch (error) {
                 console.error(error);
             }
+        },
+        setProducts(products: Product[]) {
+            this.items = products;
         },
     }
 })

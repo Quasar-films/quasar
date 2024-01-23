@@ -16,24 +16,32 @@ describe('Product store', () => {
         store = useProductsStore();
     })
 
-    afterEach(() => {
-        store.$reset();
-    })
-
-    // проверяем есть ли стор в принципе
+    // проверяем есть ли store в принципе
     it('creates a store', () => {
         expect(store).toBeDefined();
     })
 
-    // проверяем начальное значение
+    // проверяем начальное значение state
     it('initializes with empty items', () => {
         expect(store.items).toStrictEqual([]);
     })
 
-    // проверяем состояние с элементами
-    it('initializes with items', async () => {
-        await store.getProducts();
-        console.log(store.items)
+    // проверяем state с элементами
+    it('initializes with items', () => {
+        const products = [
+            {id: 100, name: 'test'}
+        ]
+        store.setProducts(products);
         expect(store.items.length).toBeGreaterThan(0);
+    })
+
+    // проверяем методы
+    it('initializes with items', () => {
+        const products = [
+            {id: 100, name: 'test'}
+        ]
+        store.setProducts(products);
+        expect(store.getProductById(100)?.name).toBe('test');
+        expect(store.getProductsCount).toBe(1);
     })
 })
