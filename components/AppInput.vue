@@ -4,10 +4,9 @@
         :class="{sizeClass}"
     >
         <input
-            :value="modelValue"
+            v-model="localValue"
             :type="type"
             :placeholder="placeholder"
-            @input="inputHandler($event.target)"
         >
     </div>
 </template>
@@ -45,11 +44,14 @@ const sizeClass = computed(() => {
     return `app-logo--${props.size}`
 });
 
-const inputHandler = (target: EventTarget | null) => {
-    const value = (target as HTMLInputElement).value;
-
-    if (value) emit('update:modelValue', value.trim());
-}
+const localValue = computed({
+    get() {
+        return props.modelValue;
+    },
+    set(value) {
+        emit('update:modelValue', value.trim())
+    },
+})
 </script>
 
 <style lang="scss" scoped>
