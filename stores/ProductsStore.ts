@@ -21,9 +21,13 @@ export const useProductsStore = defineStore('ProductsStore', {
     },
     actions: {
         async getProducts() {
-            const {data: products} = await useAsyncData('products', () => $fetch('/api/test'));
-
-            this.items = products as any;
+            try {
+                const {data: products} = await useAsyncData('products', () => $fetch('/api/test'));
+                this.items = products as any;
+            }
+            catch (error) {
+                console.error(error);
+            }
         },
     }
 })

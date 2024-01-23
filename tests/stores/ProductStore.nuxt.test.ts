@@ -29,4 +29,11 @@ describe('Product store', () => {
     it('initializes with empty items', () => {
         expect(store.items).toStrictEqual([]);
     })
+
+    // проверяем состояние с элементами
+    it('initializes with items', async () => {
+        await store.getProducts();
+        console.log(store.items)
+        expect(store.items.length).toBeGreaterThan(0);
+    })
 })
