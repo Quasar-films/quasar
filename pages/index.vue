@@ -5,6 +5,8 @@
         <div>
             {{ store.items }}
         </div>
+
+        <AppInput v-model="value"/>
     </div>
 </template>
 
@@ -15,4 +17,6 @@ useSeoMetaData(home);
 
 const store = useProductsStore();
 await store.getProducts();
+
+const value = ref('');
 </script>
