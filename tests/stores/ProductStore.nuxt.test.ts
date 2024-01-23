@@ -1,17 +1,32 @@
 import {setActivePinia, createPinia} from 'pinia';
-import {describe, expect, it, beforeEach} from 'vitest';
+import {describe, expect, it, beforeAll, beforeEach, afterEach} from 'vitest';
 import {useProductsStore} from '../../stores/ProductsStore';
 
+beforeAll(() => {
+    // создаем новый экземпляр pinia и делаем его активным,
+    // чтобы он автоматически подхватывается любым вызовом useStore()
+    // без необходимости его передачи: `useStore(pinia)`
+    setActivePinia(createPinia())
+})
+
 describe('Product store', () => {
+    let store: ReturnType<typeof useProductsStore>;
+
     beforeEach(() => {
-        // создаем новый экземпляр pinia и делаем его активным,
-        // чтобы он автоматически подхватывается любым вызовом useStore()
-        // без необходимости его передачи: `useStore(pinia)`
-        setActivePinia(createPinia())
+        store = useProductsStore();
     })
 
+    afterEach(() => {
+        store.$reset();
+    })
+
+    // проверяем есть ли стор в принципе
     it('creates a store', () => {
-        const store = useProductsStore();
         expect(store).toBeDefined();
+    })
+
+    // проверяем начальное значение
+    it('initializes with empty items', () => {
+        expect(store.items).toStrictEqual([]);
     })
 })
