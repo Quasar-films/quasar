@@ -10,7 +10,7 @@
 import type {PropType} from "vue";
 import type {Size} from "~/types";
 
-const title  = useAppConfig().title;
+const title = useAppConfig().title;
 
 const props = defineProps({
     size: {
