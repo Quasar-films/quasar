@@ -4,6 +4,6 @@ export default defineVitestConfig({
     test: {
         environment: 'happy-dom',
         globals: true,
-        reporters: ['default', 'html'],
-    },
+        reporters: ['default', 'html']
+    }
 })

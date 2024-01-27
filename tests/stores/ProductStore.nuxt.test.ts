@@ -1,6 +1,6 @@
-import {setActivePinia, createPinia} from 'pinia';
-import {describe, expect, it, beforeAll, beforeEach, afterEach} from 'vitest';
-import {useProductsStore} from '../../stores/ProductsStore';
+import { setActivePinia, createPinia } from 'pinia';
+import { describe, expect, it, beforeAll, beforeEach, afterEach } from 'vitest';
+import { useProductsStore } from '../../stores/ProductsStore';
 
 beforeAll(() => {
     // создаем новый экземпляр pinia и делаем его активным,
@@ -33,7 +33,7 @@ describe('Product store', () => {
     // проверяем state с элементами
     it('initializes with items', () => {
         const products = [
-            {id: 100, name: 'test'}
+            { id: 100, name: 'test' }
         ]
         store.setProducts(products);
         expect(store.items.length).toBeGreaterThan(0);
@@ -42,9 +42,8 @@ describe('Product store', () => {
     // проверяем методы
     it('uses methods', () => {
         const products = [
-            {id: 100, name: 'test'}
+            { id: 100, name: 'test' }
         ]
-        const test = store.getProducts();
         store.setProducts(products);
         expect(store.getProductById(100)?.name).toBe('test');
         expect(store.getProductsCount).toBe(1);

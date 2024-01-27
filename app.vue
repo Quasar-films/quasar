@@ -1,9 +1,9 @@
 <template>
-    <TheHeader/>
-    <main>
-        <NuxtPage/>
-    </main>
-    <TheFooter/>
+  <TheHeader />
+  <main>
+    <NuxtPage />
+  </main>
+  <TheFooter />
 </template>
 
 <script setup lang="ts">
@@ -14,6 +14,6 @@ useHead({
         return text
             ? `${AppTitle} | ${text}`
             : `${AppTitle}`;
-    },
+    }
 })
 </script>

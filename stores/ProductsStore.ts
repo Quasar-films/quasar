@@ -1,4 +1,4 @@
-import {defineStore} from 'pinia';
+import { defineStore } from 'pinia';
 
 type Product = {
     id: number,
@@ -10,27 +10,26 @@ type State = {
 }
 
 export const useProductsStore = defineStore('ProductsStore', {
-    state: (): State => ({items: []}),
+    state: (): State => ({ items: [] }),
     getters: {
-        getProductById(state: State) {
+        getProductById (state: State) {
             return (id: number) => state.items.find((e: Product) => e.id === id);
         },
-        getProductsCount(state: State) {
+        getProductsCount (state: State) {
             return state.items.length;
         }
     },
     actions: {
-        async getProducts() {
+        async getProducts () {
             try {
-                const {data: products} = await useAsyncData('products', () => $fetch('/api/test'));
+                const { data: products } = await useAsyncData('products', () => $fetch('/api/test'));
                 this.setProducts(products as any);
-            }
-            catch (error) {
+            } catch (error) {
                 console.error(error);
             }
         },
-        setProducts(products: Product[]) {
+        setProducts (products: Product[]) {
             this.items = products;
-        },
+        }
     }
 })
