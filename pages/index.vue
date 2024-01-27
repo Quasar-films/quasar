@@ -6,12 +6,12 @@
             {{ store.items }}
         </div>
 
-        <AppInput v-model="value"/>
+        <AppInput v-model="value" />
     </div>
 </template>
 
 <script setup lang="ts">
-import home from "~/assets/constants/seo/home";
+import home from '~/assets/constants/seo/home';
 
 useSeoMetaData(home);
 

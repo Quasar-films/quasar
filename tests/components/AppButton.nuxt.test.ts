@@ -1,6 +1,6 @@
-import {describe, expect, it} from 'vitest';
+import { describe, expect, it } from 'vitest';
 import { mount } from '@vue/test-utils'
-import AppButton from "../../components/AppButton.vue";
+import AppButton from '../../components/AppButton.vue';
 
 describe('AppButton', () => {
     it('renders button', () => {
@@ -12,8 +12,8 @@ describe('AppButton', () => {
         const wrapper = mount(AppButton, {
             props: {
                 title: 'Test Button',
-                size: 'lg',
-            },
+                size: 'lg'
+            }
         });
 
         // Ensure the component is rendered
@@ -23,6 +23,6 @@ describe('AppButton', () => {
         expect(wrapper.text()).toBe('Test Button');
 
         // Ensure the button has the dynamically generated size class
-        expect(wrapper.classes()).toContain(`sizeClass`);
+        expect(wrapper.classes()).toContain('sizeClass');
     });
 });

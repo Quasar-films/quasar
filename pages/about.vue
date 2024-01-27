@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import about from "~/assets/constants/seo/about";
+import about from '~/assets/constants/seo/about';
 
 useSeoMetaData(about);
 </script>

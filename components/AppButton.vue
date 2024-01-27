@@ -8,18 +8,18 @@
 </template>
 
 <script lang="ts" setup>
-import type {PropType} from "vue";
-import type {Size} from "~/types";
+import type { PropType } from 'vue';
+import type { Size } from '~/types';
 
 const props = defineProps({
     title: {
         type: String as PropType<string>,
-        required: true,
+        required: true
     },
     size: {
         type: String as PropType<Size>,
-        default: 'md',
-    },
+        default: 'md'
+    }
 });
 
 const sizeClass = computed(() => {

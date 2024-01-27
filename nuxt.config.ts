@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    devtools: {enabled: false},
+    devtools: { enabled: false },
     css: ['~/assets/scss/main.scss'],
     // runtimeConfig: {
     //     // примеры конфигов!!!
@@ -10,21 +10,21 @@ export default defineNuxtConfig({
     //         apiBase: '/api',
     //     },
     // },
-    modules: ["@pinia/nuxt", '@nuxt/test-utils/module'],
+    modules: ['@pinia/nuxt', '@nuxt/test-utils/module'],
     pinia: {
-        storesDirs: ['./stores/**', './custom-folder/stores/**'],
+        storesDirs: ['./stores/**', './custom-folder/stores/**']
     },
     imports: {
         dirs: ['stores']
     },
     $production: {
         typescript: {
-            typeCheck: false,
+            typeCheck: false
         }
     },
     $development: {
         typescript: {
-            typeCheck: true,
-        },
+            typeCheck: true
+        }
     }
 })

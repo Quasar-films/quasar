@@ -12,30 +12,30 @@
 </template>
 
 <script lang="ts" setup>
-import type {PropType} from "vue";
-import type {Size} from "~/types";
+import type { PropType } from 'vue';
+import type { Size } from '~/types';
 
 const props = defineProps({
     modelValue: {
         type: String as PropType<String>,
-        required: true,
+        required: true
     },
     type: {
         type: String as PropType<string>,
-        default: 'text',
+        default: 'text'
     },
     error: {
         type: String as PropType<string>,
-        default: '',
+        default: ''
     },
     placeholder: {
         type: String as PropType<string>,
-        default: '',
+        default: ''
     },
     size: {
         type: String as PropType<Size>,
-        default: 'md',
-    },
+        default: 'md'
+    }
 });
 
 const emit = defineEmits<{(e: 'update:modelValue', value: string): void}>();
@@ -45,12 +45,12 @@ const sizeClass = computed(() => {
 });
 
 const localValue = computed({
-    get() {
+    get () {
         return props.modelValue;
     },
-    set(value) {
+    set (value) {
         emit('update:modelValue', value.trim())
-    },
+    }
 })
 </script>
 

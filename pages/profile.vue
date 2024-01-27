@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import profile from "~/assets/constants/seo/profile";
+import profile from '~/assets/constants/seo/profile';
 
 useSeoMetaData(profile);
 
