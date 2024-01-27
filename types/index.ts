@@ -1,9 +1,8 @@
-export type User = {
+export type Actor = {
     id: string,
     name: string,
     surname: string,
     date_of_birth: string,
-    favorites: Film[],
 }
 
 export type Film = {
@@ -18,14 +17,15 @@ export type Film = {
     duration: number,
     budget: number,
     age_restriction: number,
-    actors: Actor[]
+    actors: Actor[],
 }
 
-export type Actor = {
+export type User = {
     id: string,
     name: string,
     surname: string,
     date_of_birth: string,
+    favorites: Film[],
 }
 
 export type Size = 'sm' | 'md' | 'lg';
