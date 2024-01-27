@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "@nuxtjs/eslint-config-typescript"
+  ],
+  "rules": {
+    "indent": ["error", 4],
+    "no-console": "off",
+    "semi": "off",
+    "semi-style": ["error", "last"]
+  }
+}
