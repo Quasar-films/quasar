@@ -1,4 +1,4 @@
-name: Deploy to Development
+name: Deploy
 
 on:
   push:
@@ -47,5 +47,5 @@ jobs:
           key: node-modules=${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
         run: npm ci
-      - name: Build application for development
+      - name: Build application
         run: npm run build
