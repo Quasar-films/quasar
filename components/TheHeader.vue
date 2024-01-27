@@ -1,24 +1,24 @@
 <template>
-  <header class="header">
-    <AppLogo />
+    <header class="header">
+        <AppLogo />
 
-    <nav class="header__nav">
-      <ul class="header__list">
-        <li
-          v-for="link in links"
-          :key="link.id"
-          class="header__list-item"
-        >
-          <NuxtLink
-            :to="link.route"
-            class="header__link link"
-          >
-            {{ link.name }}
-          </NuxtLink>
-        </li>
-      </ul>
-    </nav>
-  </header>
+        <nav class="header__nav">
+            <ul class="header__list">
+                <li
+                    v-for="link in links"
+                    :key="link.id"
+                    class="header__list-item"
+                >
+                    <NuxtLink
+                        :to="link.route"
+                        class="header__link link"
+                    >
+                        {{ link.name }}
+                    </NuxtLink>
+                </li>
+            </ul>
+        </nav>
+    </header>
 </template>
 
 <script setup lang="ts">

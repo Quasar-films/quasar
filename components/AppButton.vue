@@ -1,10 +1,10 @@
 <template>
-  <button
-    class="app-button"
-    :class="{sizeClass}"
-  >
-    {{ title }}
-  </button>
+    <button
+        class="app-button"
+        :class="{sizeClass}"
+    >
+        {{ title }}
+    </button>
 </template>
 
 <script lang="ts" setup>

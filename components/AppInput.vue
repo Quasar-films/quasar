@@ -1,14 +1,14 @@
 <template>
-  <div
-    class="app-input"
-    :class="{sizeClass}"
-  >
-    <input
-      v-model="localValue"
-      :type="type"
-      :placeholder="placeholder"
+    <div
+        class="app-input"
+        :class="{sizeClass}"
     >
-  </div>
+        <input
+            v-model="localValue"
+            :type="type"
+            :placeholder="placeholder"
+        >
+    </div>
 </template>
 
 <script lang="ts" setup>

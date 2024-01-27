@@ -4,6 +4,7 @@
   ],
   "rules": {
     "indent": ["error", 4],
+    "vue/html-indent": ["error", 4],
     "no-console": "off",
     "semi": "off",
     "semi-style": ["error", "last"]

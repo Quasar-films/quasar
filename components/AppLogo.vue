@@ -1,9 +1,9 @@
 <template>
-  <NuxtLink to="/">
-    <div class="app-logo" :class="sizeClass">
-      {{ title }}
-    </div>
-  </NuxtLink>
+    <NuxtLink to="/">
+        <div class="app-logo" :class="sizeClass">
+            {{ title }}
+        </div>
+    </NuxtLink>
 </template>
 
 <script setup lang="ts">
