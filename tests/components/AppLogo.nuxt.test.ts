@@ -4,7 +4,13 @@ import AppLogo from '../../components/AppLogo.vue';
 
 describe('AppLogo', () => {
     it('renders logo', () => {
-        const wrapper = mount(AppLogo);
+        const wrapper = mount(AppLogo, {
+            global: {
+                stubs: {
+                    NuxtLink: RouterLinkStub,
+                },
+            },
+        });
 
         // Ensure the component is rendered
         expect(wrapper.exists()).toBe(true);
