@@ -4,8 +4,12 @@ import AppButton from '../../components/AppButton.vue';
 
 describe('AppButton', () => {
     it('renders button', () => {
-        const wrapper = mount(AppButton)
-        expect(wrapper.vm).toBeTruthy()
+        const wrapper = mount(AppButton,{
+            props: {
+                title: 'Test Button'
+            }
+        })
+        expect(wrapper.vm).toBeTruthy();
     });
 
     it('renders button with custom size', () => {

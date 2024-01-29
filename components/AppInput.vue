@@ -1,8 +1,5 @@
 <template>
-    <div
-        class="app-input"
-        :class="{sizeClass}"
-    >
+    <div class="app-input" :class="{sizeClass}">
         <input
             v-model="localValue"
             :type="type"
