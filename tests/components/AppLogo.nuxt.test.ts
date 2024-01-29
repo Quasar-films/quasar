@@ -7,9 +7,9 @@ describe('AppLogo', () => {
         const wrapper = mount(AppLogo, {
             global: {
                 stubs: {
-                    NuxtLink: RouterLinkStub,
-                },
-            },
+                    NuxtLink: RouterLinkStub
+                }
+            }
         });
 
         // Ensure the component is rendered
@@ -23,9 +23,9 @@ describe('AppLogo', () => {
             },
             global: {
                 stubs: {
-                    NuxtLink: RouterLinkStub,
-                },
-            },
+                    NuxtLink: RouterLinkStub
+                }
+            }
         });
 
         // Ensure the component is rendered

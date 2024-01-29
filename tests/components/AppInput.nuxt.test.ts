@@ -6,8 +6,8 @@ describe('AppInput', () => {
     it('renders input', () => {
         const wrapper = mount(AppInput, {
             props: {
-                modelValue: '',
-            },
+                modelValue: ''
+            }
         });
         // Ensure the component is rendered
         expect(wrapper.exists()).toBe(true);
@@ -17,8 +17,8 @@ describe('AppInput', () => {
         const wrapper = mount(AppInput, {
             props: {
                 modelValue: '',
-                size: 'lg',
-            },
+                size: 'lg'
+            }
         });
         // Ensure the component is rendered
         expect(wrapper.exists()).toBe(true);
@@ -29,8 +29,8 @@ describe('AppInput', () => {
     it('binds input value to modelValue and updates it', async () => {
         const wrapper = mount(AppInput, {
             props: {
-                modelValue: '',
-            },
+                modelValue: ''
+            }
         });
 
         // Ensure the component is rendered

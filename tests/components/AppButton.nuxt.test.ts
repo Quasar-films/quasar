@@ -4,7 +4,7 @@ import AppButton from '../../components/AppButton.vue';
 
 describe('AppButton', () => {
     it('renders button', () => {
-        const wrapper = mount(AppButton,{
+        const wrapper = mount(AppButton, {
             props: {
                 title: 'Test Button'
             }

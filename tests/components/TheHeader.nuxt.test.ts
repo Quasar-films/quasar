@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { mount, RouterLinkStub  } from '@vue/test-utils';
+import { mount, RouterLinkStub } from '@vue/test-utils';
 import TheHeader from '../../components/TheHeader.vue';
 
 describe('TheHeader', () => {
@@ -7,9 +7,9 @@ describe('TheHeader', () => {
         const wrapper = mount(TheHeader, {
             global: {
                 stubs: {
-                    NuxtLink: RouterLinkStub,
-                },
-            },
+                    NuxtLink: RouterLinkStub
+                }
+            }
         });
 
         // Ensure the component is rendered
@@ -20,9 +20,9 @@ describe('TheHeader', () => {
         const wrapper = mount(TheHeader, {
             global: {
                 stubs: {
-                    NuxtLink: RouterLinkStub,
-                },
-            },
+                    NuxtLink: RouterLinkStub
+                }
+            }
         });
 
         // Ensure AppLogo component is rendered inside header
@@ -33,9 +33,9 @@ describe('TheHeader', () => {
         const wrapper = mount(TheHeader, {
             global: {
                 stubs: {
-                    NuxtLink: RouterLinkStub,
-                },
-            },
+                    NuxtLink: RouterLinkStub
+                }
+            }
         });
 
         // Ensure the correct number of navigation links are rendered
@@ -46,7 +46,7 @@ describe('TheHeader', () => {
         const expectedLinks = [
             { name: 'Home', route: '/' },
             { name: 'About', route: '/about' },
-            { name: 'Profile', route: '/profile' },
+            { name: 'Profile', route: '/profile' }
         ];
 
         navLinks.forEach((navLink, index) => {
