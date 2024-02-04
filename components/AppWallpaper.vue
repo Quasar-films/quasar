@@ -45,7 +45,28 @@ const getImgSrc = (path: string) => {
 
 <style lang="scss" scoped>
 .app-wallpaper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    position: relative;
+
+    &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    z-index: 1;
+}
+
     &__item {
+        position: relative;
+        z-index: 2;
+
         &:not(:last-child) {
             margin-bottom: 24px;
         }
