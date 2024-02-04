@@ -1,7 +1,11 @@
 <template>
     <button
         class="app-button"
-        :class="{sizeClass, 'app-button--transparent': transparent}"
+        :class="{
+        'app-button--transparent': transparent,
+        'app-button--sm': size === 'sm',
+        'app-button--lg': size === 'lg'
+    }"
     >
         {{ title }}
     </button>
@@ -25,10 +29,6 @@ const props = defineProps({
         default: false,
     },
 });
-
-const sizeClass = computed(() => {
-    return `app-logo--${props.size}`
-});
 </script>
 
 <style lang="scss" scoped>
@@ -40,8 +40,6 @@ const sizeClass = computed(() => {
     justify-content: center;
     font-family: $main-ff;
     color: $main-color;
-    border: none;
-    outline: none;
     padding: 10px 24px;
     border-radius: $br24;
     background: $secondary-bg-color;
@@ -49,13 +47,22 @@ const sizeClass = computed(() => {
     font-size: 16px;
     transition: .3s;
     position: relative;
+    border: $violet-border;
+
+    &--sm {
+        padding: 6px 14px;
+        font-size: 13px;
+    }
+
+    &:hover {
+        background: $main-bg-color;
+    }
 
     &--transparent {
         background: $gradient-bg-color;
-        border: $violet-border;
 
         &:hover {
-            background: $main-bg-color;
+            background: $secondary-bg-color;
         }
     }
 }
