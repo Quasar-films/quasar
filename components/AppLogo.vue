@@ -33,10 +33,14 @@ const sizeClass = computed(() => {
     justify-content: center;
     font-family: $secondary-ff;
     font-size: 28px;
-    background: $secondary-bg-color;
-    padding: 7px 12px;
     border-radius: $br8;
     cursor: pointer;
+    position: relative;
+
+    &:hover {
+        color: $violet-color;
+        transition: 0.3s ease;
+    }
 
     &--sm {
         font-size: 22px;

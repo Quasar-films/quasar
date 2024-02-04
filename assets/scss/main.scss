@@ -11,7 +11,7 @@
 }
 
 body {
-    background-color: $main-bg-color;
+    background: $main-bg-color;
     font-family: $main-ff !important;
     font-size: 16px;
     text-rendering: optimizeLegibility;
@@ -42,16 +42,24 @@ body {
 }
 
 main {
-    height: 1000px;
-    padding: 72px 20px 40px;
-    max-width: 1400px;
+    height: 100%;
     width: 100%;
-    margin: 0 auto;
+    display: flex;
+}
+
+.inner {
+    width: 100%;
+    height: 100%;
+    padding: 24px;
 }
 
 a {
     text-decoration: none;
     cursor: pointer;
+}
+
+li {
+    list-style: none;
 }
 
 .link {

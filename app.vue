@@ -1,10 +1,9 @@
 <template>
-    <div id="app">
-        <TheHeader />
-        <main>
-            <NuxtPage />
+    <div>
+        <main class="main">
+            <TheSidebar/>
+            <NuxtPage class="inner"/>
         </main>
-        <TheFooter />
     </div>
 </template>
 
@@ -19,3 +18,5 @@ useHead({
     }
 })
 </script>
+
+
