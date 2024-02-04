@@ -30,10 +30,16 @@ export type User = {
 
 export type Size = 'sm' | 'md' | 'lg';
 
-export type Wallpaper = {
+export type WallpaperType = {
     imagePath: string,
     badge: string,
     title: string,
     description: string,
     btnTitle: string,
+}
+
+export type CardType = {
+    imagePath: string,
+    title: string,
+    description: string,
 }

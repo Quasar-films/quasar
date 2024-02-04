@@ -47,6 +47,7 @@ const links = [
 @import "../assets/scss/variables";
 
 .sidebar {
+    min-width: 240px;
     padding: 0 16px;
     border-radius: 0 $br8 $br8 0;
     background: $gradient-bg-color;

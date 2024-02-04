@@ -29,11 +29,11 @@
 
 <script lang="ts" setup>
 import type { PropType } from 'vue';
-import type {Wallpaper} from '~/types';
+import type {WallpaperType} from '~/types';
 
 const props = defineProps({
     content: {
-        type: Object as PropType<Wallpaper>,
+        type: Object as PropType<WallpaperType>,
         required: true,
     },
 });
