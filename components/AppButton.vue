@@ -1,7 +1,7 @@
 <template>
     <button
         class="app-button"
-        :class="{sizeClass}"
+        :class="{sizeClass, 'app-button--transparent': transparent}"
     >
         {{ title }}
     </button>
@@ -19,7 +19,11 @@ const props = defineProps({
     size: {
         type: String as PropType<Size>,
         default: 'md'
-    }
+    },
+    transparent: {
+        type: Boolean as PropType<boolean>,
+        default: false,
+    },
 });
 
 const sizeClass = computed(() => {
@@ -34,15 +38,25 @@ const sizeClass = computed(() => {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50px;
     font-family: $main-ff;
     color: $main-color;
     border: none;
     outline: none;
-    padding: 14px 16px;
-    border-radius: $br12;
+    padding: 10px 24px;
+    border-radius: $br24;
     background: $secondary-bg-color;
     cursor: pointer;
     font-size: 16px;
+    transition: .3s;
+    position: relative;
+
+    &--transparent {
+        background: $gradient-bg-color;
+        border: $violet-border;
+
+        &:hover {
+            background: $main-bg-color;
+        }
+    }
 }
 </style>

@@ -2,7 +2,14 @@
     <aside class="sidebar">
         <nav class="sidebar__navigation">
             <div class="sidebar__item sidebar__header">
+                <AppButton
+                    title="Sign in"
+                    transparent
+                    class="sidebar__btn-login"
+                />
+
                 <IconStar class="sidebar__icon"/>
+
                 <AppLogo class="sidebar__title"/>
             </div>
 
@@ -50,6 +57,13 @@ const links = [
     &__header {
         display: flex;
         align-items: center;
+    }
+
+    &__btn-login {
+        position: fixed;
+        top: 24px;
+        right: 24px;
+        z-index: 1000;
     }
 
     &__icon {

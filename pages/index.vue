@@ -1,12 +1,8 @@
 <template>
-    <div>
-        <h3>home</h3>
+    <div class="home">
+        <div class="home__header">
 
-        <div>
-            {{ store.items }}
         </div>
-
-        <AppInput v-model="value" />
     </div>
 </template>
 
@@ -17,6 +13,11 @@ useSeoMetaData(home);
 
 const store = useProductsStore();
 await store.getProducts();
-
-const value = ref('');
 </script>
+
+<style lang="scss" scoped>
+.home {
+    &__header {
+    }
+}
+</style>
