@@ -8,9 +8,9 @@
                     class="sidebar__btn-login"
                 />
 
-                <IconStar class="sidebar__icon"/>
+                <IconStar class="sidebar__icon" />
 
-                <AppLogo class="sidebar__title"/>
+                <AppLogo class="sidebar__title" />
             </div>
 
             <ul class="sidebar__list">
@@ -32,14 +32,14 @@
 </template>
 
 <script setup lang="ts">
-import IconStar from "~/components/icons/IconStar.vue";
+import IconStar from '~/components/icons/IconStar.vue';
 
 const links = [
     { id: 1, name: 'About', route: '/about' },
     { id: 2, name: 'Profile', route: '/profile' },
     { id: 3, name: 'Top charts', route: '/' },
     { id: 4, name: 'Trending', route: '/' },
-    { id: 5, name: 'Ratings', route: '/' },
+    { id: 5, name: 'Ratings', route: '/' }
 ]
 </script>
 

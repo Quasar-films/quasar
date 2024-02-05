@@ -27,6 +27,6 @@ describe('AppButton', () => {
         expect(wrapper.text()).toBe('Test Button');
 
         // Ensure the button has the dynamically generated size class
-        expect(wrapper.classes()).toContain('sizeClass');
+        expect(wrapper.classes()).toContain('app-button--lg');
     });
 });

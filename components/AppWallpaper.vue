@@ -29,13 +29,13 @@
 
 <script lang="ts" setup>
 import type { PropType } from 'vue';
-import type {WallpaperType} from '~/types';
+import type { WallpaperType } from '~/types';
 
 const props = defineProps({
     content: {
         type: Object as PropType<WallpaperType>,
-        required: true,
-    },
+        required: true
+    }
 });
 
 const getImgSrc = (path: string) => {

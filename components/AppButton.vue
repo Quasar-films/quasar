@@ -2,10 +2,10 @@
     <button
         class="app-button"
         :class="{
-        'app-button--transparent': transparent,
-        'app-button--sm': size === 'sm',
-        'app-button--lg': size === 'lg'
-    }"
+            'app-button--transparent': transparent,
+            'app-button--sm': size === 'sm',
+            'app-button--lg': size === 'lg'
+        }"
     >
         {{ title }}
     </button>
@@ -26,8 +26,8 @@ const props = defineProps({
     },
     transparent: {
         type: Boolean as PropType<boolean>,
-        default: false,
-    },
+        default: false
+    }
 });
 </script>
 

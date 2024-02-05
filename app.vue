@@ -1,8 +1,8 @@
 <template>
     <div>
         <main class="main">
-            <TheSidebar/>
-            <NuxtPage class="inner"/>
+            <TheSidebar />
+            <NuxtPage class="inner" />
         </main>
     </div>
 </template>
@@ -18,5 +18,3 @@ useHead({
     }
 })
 </script>
-
-
