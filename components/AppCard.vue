@@ -18,13 +18,13 @@
 
 <script lang="ts" setup>
 import type { PropType } from 'vue';
-import type {CardType} from '~/types';
+import type { CardType } from '~/types';
 
 const props = defineProps({
     content: {
         type: Object as PropType<CardType>,
-        required: true,
-    },
+        required: true
+    }
 });
 
 const getImgSrc = (path: string) => {
