@@ -39,7 +39,7 @@ const props = defineProps({
 });
 
 const getImgSrc = (path: string) => {
-    return `/_nuxt/${path}`;
+    return new URL(`/_nuxt/${path}`, import.meta.url).href;
 };
 </script>
 
