@@ -37,9 +37,9 @@ import IconStar from "~/components/icons/IconStar.vue";
 const links = [
     { id: 1, name: 'About', route: '/about' },
     { id: 2, name: 'Profile', route: '/profile' },
-    { id: 3, name: 'Top charts', route: '/charts' },
-    { id: 4, name: 'Trending', route: '/trending' },
-    { id: 5, name: 'Ratings', route: '/ratings' },
+    { id: 3, name: 'Top charts', route: '/' },
+    { id: 4, name: 'Trending', route: '/' },
+    { id: 5, name: 'Ratings', route: '/' },
 ]
 </script>
 
