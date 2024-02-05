@@ -49,9 +49,9 @@ jobs:
         run: npm ci
       - name: Build application
         run: npm run generate
-      - name: Deploy to production
-        run: |
-          git config --global user.email "nikita607693@yandex.ru"
-          git config --global user.name "Nikitereh"
-          npm install -g gh-pages
-          gh-pages -d dist
+#      - name: Deploy to gh pages
+#        run: |
+#          git config --global user.email "nikita607693@yandex.ru"
+#          git config --global user.name "Nikitereh"
+#          npm install -g gh-pages
+#          gh-pages -d .output/public

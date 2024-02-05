@@ -12,7 +12,7 @@
     "coverage": "vitest run --coverage",
     "test-preview": "npx vite preview --outDir html",
     "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore --fix .",
-    "deploy": "gh-pages -d dist"
+    "deploy": "nuxt generate && gh-pages --dotfiles -d .output/public"
   },
   "devDependencies": {
     "@nuxt/test-utils": "^3.10.0",
