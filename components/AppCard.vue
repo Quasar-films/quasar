@@ -1,7 +1,7 @@
 <template>
     <div class="app-card">
         <div class="app-card__image-wrapper">
-            <img :src="getImgSrc(content.imagePath)" alt="logo">
+            <img src="assets/images/1707035569865a30nawsz.jpg" alt="logo">
         </div>
 
         <div class="app-card__content">
