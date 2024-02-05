@@ -55,20 +55,3 @@ const cards = reactive([
     },
 ]);
 </script>
-
-<style lang="scss" scoped>
-.home {
-    &__header {
-        height: 500px;
-        display: flex;
-        align-items: center;
-    }
-
-    &__list {
-        padding: 24px;
-        flex-wrap: wrap;
-        display: flex;
-        gap: 16px;
-    }
-}
-</style>
