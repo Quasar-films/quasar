@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     app: {
-        baseURL: '/Quasar-films/quasar/'
+        baseURL: '/quasar/'
     },
     devtools: { enabled: false },
     css: ['~/assets/scss/main.scss'],
